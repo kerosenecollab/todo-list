@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+.task-form {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-form input[type="text"],
+.task-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.task-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.task-form button {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-form button:hover {
+    background: #4cae4c;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    border-left: 4px solid #5cb85c;
+}
+
+.task-content h3 {
+    margin: 0 0 5px 0;
+}
+
+.task-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.task-content small {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.btn {
+    background: #337ab7;color: white;
+}
+
+.btn:hover {
+    background: #286090;
+}
+
+.btn.delete {
+    background: #d9534f;
+}
+
+.btn.delete:hover {
+    background: #c9302c;
+}
+
+.btn.cancel {
+    background: #f0ad4e;
+}
+
+.btn.cancel:hover {
+    background: #ec971f;
+}
+
+.form-group {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="{{ url_for('edit', task_id=task[0]) }}" method="post" class="task-form">
+        <input type="text" name="title" value="{{ task[1] }}" required>
+        <textarea name="description">{{ task[2] }}</textarea>
+        <div class="form-group">
+            <input type="checkbox" name="is_completed" id="is_completed" {% if task[3] %}checked{% endif %}>
+            <label for="is_completed">Выполнено</label>
+        </div>
+        <button type="submit">Сохранить</button>
+        <a href="{{ url_for('index') }}" class="btn cancel">Отмена</a>
+    </form>
+{% endblock %}

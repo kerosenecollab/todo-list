@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="{{ url_for('add') }}" method="post" class="task-form">
+        <input type="text" name="title" placeholder="Название задачи" required>
+        <textarea name="description" placeholder="Описание"></textarea>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <ul class="task-list">
+        {% for task in tasks %}
+            <li class="task-item {% if task[3] %}completed{% endif %}">
+                <div class="task-content">
+                    <h3>{{ task[1] }}</h3>
+                    {% if task[2] %}<p>{{ task[2] }}</p>{% endif %}
+                    <small>Создано: {{ task[4] }}</small>
+                </div>
+                <div class="task-actions">
+                    <a href="{{ url_for('edit', task_id=task[0]) }}" class="btn">Редактировать</a>
+                    <a href="{{ url_for('delete', task_id=task[0]) }}" class="btn delete">Удалить</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
